@@ -93,48 +93,33 @@
     }
 
     #mainContent {
+      width: 100%;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
       opacity: 0;
-      transform: translateY(10px);
+      transform: scale(1.03);
       transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
+        opacity 0.8s ease,
+        transform 1.2s ease;
     }
 
     #mainContent.show {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
 
-    .welcome {
+    .hero {
       width: 100%;
-      max-width: 600px;
-      text-align: center;
+      min-height: 100svh;
+      background-image: url("WALL.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
-    .welcome img {
-      width: 150px;
-      max-width: 55vw;
-      height: auto;
-      margin-bottom: 24px;
-      border-radius: 20px;
-    }
-
-    .welcome h1 {
-      margin: 0 0 12px;
-      font-size: clamp(28px, 7vw, 46px);
-      color: #222222;
-    }
-
-    .welcome p {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.8;
-      color: #666666;
+    @media (min-width: 768px) {
+      .hero {
+        background-position: center center;
+      }
     }
   </style>
 </head>
@@ -146,11 +131,7 @@
   </div>
 
   <main id="mainContent">
-    <section class="welcome">
-      <img src="Pina-logo.jpg" alt="Pina Cool Logo">
-      <h1>مرحبًا بكم في PINA</h1>
-      <p>قريبًا سيتم عرض منتجاتنا هنا.</p>
-    </section>
+    <section class="hero"></section>
   </main>
 
   <script>
