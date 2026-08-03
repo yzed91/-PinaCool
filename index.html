@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pina Cool</title>
+
+  <meta name="description" content="الموقع الرسمي لمنتجات Pina Cool">
+
+  <link rel="icon" type="image/jpeg" href="Pina-logo.jpg">
+  <link rel="apple-touch-icon" href="Pina-logo.jpg">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #ffffff;
+      color: #222222;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      opacity: 1;
+      visibility: visible;
+      transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+    }
+
+    #intro.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #intro img {
+      width: 190px;
+      max-width: 65vw;
+      height: auto;
+      opacity: 0;
+      transform: scale(0.8);
+      animation:
+        logoEnter 0.9s ease forwards,
+        logoPulse 1.2s ease-in-out 0.9s;
+    }
+
+    @keyframes logoEnter {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      65% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes logoPulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    #mainContent {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+
+    #mainContent.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .welcome {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .welcome img {
+      width: 150px;
+      max-width: 55vw;
+      height: auto;
+      margin-bottom: 24px;
+      border-radius: 20px;
+    }
+
+    .welcome h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 7vw, 46px);
+      color: #222222;
+    }
+
+    .welcome p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #666666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="intro">
+    <img src="Pina-logo.jpg" alt="Pina Cool Logo">
+  </div>
+
+  <main id="mainContent">
+    <section class="welcome">
+      <img src="Pina-logo.jpg" alt="Pina Cool Logo">
+      <h1>مرحبًا بكم في Pina Cool</h1>
+      <p>قريبًا سيتم عرض منتجاتنا هنا.</p>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener("load", () => {
+      const intro = document.getElementById("intro");
+      const mainContent = document.getElementById("mainContent");
+
+      setTimeout(() => {
+        intro.classList.add("hide");
+        mainContent.classList.add("show");
+      }, 1800);
+    });
+  </script>
+
+</body>
+</html>
