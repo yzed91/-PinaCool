@@ -19,11 +19,14 @@
     }
 
     html {
+      min-height: 100%;
       scroll-behavior: smooth;
+      background: #F77C02;
     }
 
     body {
-      background: #ffffff;
+      min-height: 100vh;
+      background: #F77C02;
       color: #222222;
       font-family: Arial, sans-serif;
       overflow-x: hidden;
@@ -94,6 +97,8 @@
 
     #mainContent {
       width: 100%;
+      min-height: 100vh;
+      background: #F77C02;
       opacity: 0;
       transform: translateY(15px);
       transition:
@@ -117,7 +122,7 @@
       margin-bottom: 22px;
       text-align: center;
       font-size: 28px;
-      color: #222222;
+      color: #ffffff;
     }
 
     .productsGrid {
@@ -130,7 +135,7 @@
       overflow: hidden;
       background: #ffffff;
       border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
     }
 
     .productCard img {
