@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tropical Mango | Pina Cool</title>
+  <title>Pina Cool</title>
 
-  <meta name="description" content="تفاصيل نكهة مانجو استوائي من Pina Cool">
+  <meta name="description" content="تفاصيل منتجات Pina Cool">
 
   <link rel="icon" type="image/jpeg" href="Pina-logo.jpg">
   <link rel="apple-touch-icon" href="Pina-logo.jpg">
@@ -214,21 +214,20 @@
     <article class="productCard">
 
       <img
-        src="Mangoes.PNG"
-        alt="Tropical Mango"
+        id="productImage"
+        src=""
+        alt=""
         class="productImage"
       >
 
-      <h1 class="productNameEn">Tropical Mango</h1>
-      <h2 class="productNameAr">مانجو استوائي</h2>
+      <h1 id="productNameEn" class="productNameEn"></h1>
+      <h2 id="productNameAr" class="productNameAr"></h2>
 
     </article>
 
     <section class="contentCard">
 
-      <p class="descriptionText">
-        استمتع بقطع الأناناس المنكهة بنكهة المانجو الاستوائية، حيث تمتزج نكهة الأناناس الطبيعية مع نكهة المانجو الغنية لتمنحك تجربة استوائية مليئة بالانتعاش. كل قطعة مشبعة بالنكهة لتقدم مذاقًا فاكهيًا مميزًا يجعلها خيارًا مثاليًا للاستمتاع به في أي وقت من اليوم.
-      </p>
+      <p id="descriptionAr" class="descriptionText"></p>
 
       <div class="sectionBlock">
         <h2 class="sectionTitle">القيم الغذائية</h2>
@@ -236,15 +235,15 @@
         <table class="factsTable">
           <tr>
             <th>حجم الحصة</th>
-            <td>350 مل</td>
+            <td id="servingAr"></td>
           </tr>
           <tr>
             <th>السعرات الحرارية</th>
-            <td>214 سعرة</td>
+            <td id="caloriesAr"></td>
           </tr>
           <tr>
             <th>السكريات</th>
-            <td>19 جم</td>
+            <td id="sugarsAr"></td>
           </tr>
         </table>
       </div>
@@ -280,9 +279,7 @@
 
       <div class="englishSection">
 
-        <p class="descriptionText">
-          Enjoy pineapple pieces infused with rich Tropical Mango flavor, combining the natural taste of pineapple with a delicious tropical twist. Every piece is infused with flavor, delivering a refreshing fruity experience that's perfect anytime you want a vibrant tropical snack.
-        </p>
+        <p id="descriptionEn" class="descriptionText"></p>
 
         <div class="sectionBlock">
           <h2 class="sectionTitle">Nutrition Facts</h2>
@@ -290,15 +287,15 @@
           <table class="factsTable">
             <tr>
               <th>Serving Size</th>
-              <td>350 ml</td>
+              <td id="servingEn"></td>
             </tr>
             <tr>
               <th>Calories</th>
-              <td>214 kcal</td>
+              <td id="caloriesEn"></td>
             </tr>
             <tr>
               <th>Sugars</th>
-              <td>19 g</td>
+              <td id="sugarsEn"></td>
             </tr>
           </table>
         </div>
@@ -337,6 +334,62 @@
     </section>
 
   </main>
+
+  <script>
+    const products = {
+      "tropical-mango": {
+        title: "Tropical Mango | Pina Cool",
+        image: "Mangoes.PNG",
+        nameEn: "Tropical Mango",
+        nameAr: "مانجو استوائي",
+        descriptionAr: "استمتع بقطع الأناناس المنكهة بنكهة المانجو الاستوائية، حيث تمتزج نكهة الأناناس الطبيعية مع نكهة المانجو الغنية لتمنحك تجربة استوائية مليئة بالانتعاش. كل قطعة مشبعة بالنكهة لتقدم مذاقًا فاكهيًا مميزًا يجعلها خيارًا مثاليًا للاستمتاع به في أي وقت من اليوم.",
+        descriptionEn: "Enjoy pineapple pieces infused with rich Tropical Mango flavor, combining the natural taste of pineapple with a delicious tropical twist. Every piece is infused with flavor, delivering a refreshing fruity experience that's perfect anytime you want a vibrant tropical snack.",
+        servingAr: "350 مل",
+        caloriesAr: "214 سعرة",
+        sugarsAr: "19 جم",
+        servingEn: "350 ml",
+        caloriesEn: "214 kcal",
+        sugarsEn: "19 g"
+      },
+
+      "hibiscus-berries": {
+        title: "Hibiscus & Berries | Pina Cool",
+        image: "Hibiscus and Berries.PNG",
+        nameEn: "Hibiscus & Berries",
+        nameAr: "كركديه مع التوت",
+        descriptionAr: "استمتع بقطع الأناناس المنكهة بمزيج الكركديه والتوت، حيث يجتمع الطابع الزهري المنعش للكركديه مع النكهات الغنية للتوت ليمنحك تجربة فاكهية متوازنة ومليئة بالحيوية. كل قطعة مشبعة بالنكهة لتقدم مذاقًا منعشًا يجمع بين الحلاوة والانتعاش في كل قضمة.",
+        descriptionEn: "Enjoy pineapple pieces infused with a refreshing blend of Hibiscus & Berries flavor. The floral notes of hibiscus combine with the rich sweetness of berries to create a vibrant tropical taste. Every piece is infused with flavor, delivering a refreshing and satisfying fruity experience.",
+        servingAr: "350 مل",
+        caloriesAr: "100 سعرة",
+        sugarsAr: "19 جم",
+        servingEn: "350 ml",
+        caloriesEn: "100 kcal",
+        sugarsEn: "19 g"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const productKey = params.get("product") || "tropical-mango";
+    const product = products[productKey] || products["tropical-mango"];
+
+    document.title = product.title;
+
+    document.getElementById("productImage").src = product.image;
+    document.getElementById("productImage").alt = product.nameEn;
+    document.getElementById("productNameEn").textContent = product.nameEn;
+    document.getElementById("productNameAr").textContent = product.nameAr;
+
+    document.getElementById("descriptionAr").textContent = product.descriptionAr;
+    document.getElementById("descriptionEn").textContent = product.descriptionEn;
+
+    document.getElementById("servingAr").textContent = product.servingAr;
+    document.getElementById("caloriesAr").textContent = product.caloriesAr;
+    document.getElementById("sugarsAr").textContent = product.sugarsAr;
+
+    document.getElementById("servingEn").textContent = product.servingEn;
+    document.getElementById("caloriesEn").textContent = product.caloriesEn;
+    document.getElementById("sugarsEn").textContent = product.sugarsEn;
+  </script>
 
 </body>
 </html>
