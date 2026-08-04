@@ -6,11 +6,20 @@
 
   <title>Tropical Mango | Pina Cool</title>
 
+  <meta name="description" content="تفاصيل نكهة مانجو استوائي من Pina Cool">
+
+  <link rel="icon" type="image/jpeg" href="Pina-logo.jpg">
+  <link rel="apple-touch-icon" href="Pina-logo.jpg">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,8 +31,9 @@
         #F98A05 60%,
         #FDB414 100%
       );
-      font-family: Arial, sans-serif;
       color: #222222;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     .productPage {
@@ -42,12 +52,16 @@
       text-decoration: none;
     }
 
-    .productCard {
+    .productCard,
+    .contentCard {
       overflow: hidden;
-      padding-bottom: 24px;
       background: #ffffff;
       border-radius: 24px;
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+    }
+
+    .productCard {
+      padding-bottom: 24px;
       text-align: center;
     }
 
@@ -73,32 +87,120 @@
       line-height: 1.5;
     }
 
-    .descriptionCard {
+    .contentCard {
       margin-top: 18px;
       padding: 24px 20px;
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
     }
 
-    .descriptionTitle {
-      margin-bottom: 12px;
+    .descriptionText {
+      color: #555555;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .sectionBlock {
+      margin-top: 26px;
+      padding-top: 24px;
+      border-top: 1px solid #eeeeee;
+    }
+
+    .sectionTitle {
+      margin-bottom: 14px;
       font-size: 22px;
       color: #222222;
     }
 
-    .descriptionText {
+    .factsTable {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 2px solid #222222;
+      border-radius: 14px;
+    }
+
+    .factsTable tr:not(:last-child) {
+      border-bottom: 2px solid #222222;
+    }
+
+    .factsTable th,
+    .factsTable td {
+      padding: 13px 12px;
+      font-size: 15px;
+    }
+
+    .factsTable th {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .factsTable td {
+      text-align: left;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .experienceList {
+      display: grid;
+      gap: 10px;
+    }
+
+    .experienceItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 14px;
+      background: #fff6e9;
+      border-radius: 12px;
+    }
+
+    .experienceLabel {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .experienceValue {
       font-size: 16px;
-      line-height: 2;
-      color: #555555;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .englishSection {
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid #eeeeee;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 3px solid #222222;
       direction: ltr;
       text-align: left;
+    }
+
+    .englishSection .factsTable th {
+      text-align: left;
+    }
+
+    .englishSection .factsTable td {
+      text-align: right;
+    }
+
+    @media (min-width: 768px) {
+      .productPage {
+        padding: 30px 20px 70px;
+      }
+
+      .productNameEn {
+        font-size: 32px;
+      }
+
+      .productNameAr {
+        font-size: 23px;
+      }
+
+      .contentCard {
+        padding: 30px 28px;
+      }
+
+      .descriptionText {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
@@ -118,27 +220,118 @@
       >
 
       <h1 class="productNameEn">Tropical Mango</h1>
-
       <h2 class="productNameAr">مانجو استوائي</h2>
 
     </article>
 
-    <section class="descriptionCard">
+    <section class="contentCard">
 
-      <div>
-        <h2 class="descriptionTitle">مانجو استوائي</h2>
+      <p class="descriptionText">
+        استمتع بقطع الأناناس المنكهة بنكهة المانجو الاستوائية، حيث تمتزج نكهة الأناناس الطبيعية مع نكهة المانجو الغنية لتمنحك تجربة استوائية مليئة بالانتعاش. كل قطعة مشبعة بالنكهة لتقدم مذاقًا فاكهيًا مميزًا يجعلها خيارًا مثاليًا للاستمتاع به في أي وقت من اليوم.
+      </p>
+
+      <div class="sectionBlock">
+        <h2 class="sectionTitle">القيم الغذائية</h2>
+
+        <table class="factsTable">
+          <tr>
+            <th>حجم الحصة</th>
+            <td>350 مل</td>
+          </tr>
+          <tr>
+            <th>السعرات الحرارية</th>
+            <td>214</td>
+          </tr>
+          <tr>
+            <th>السكريات</th>
+            <td>19 جم</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="sectionBlock">
+        <h2 class="sectionTitle">تجربة PINA</h2>
+
+        <div class="experienceList">
+          <div class="experienceItem">
+            <span class="experienceLabel">السعادة</span>
+            <span class="experienceValue">1000%</span>
+          </div>
+
+          <div class="experienceItem">
+            <span class="experienceLabel">المزاج الجميل</span>
+            <span class="experienceValue">1000%</span>
+          </div>
+
+          <div class="experienceItem">
+            <span class="experienceLabel">إشراقة البشرة</span>
+            <span class="experienceValue">1000%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sectionBlock">
+        <h2 class="sectionTitle">لماذا الأناناس؟</h2>
 
         <p class="descriptionText">
-          استمتع بقطع الأناناس المنكهة بنكهة المانجو الاستوائية، حيث تمتزج نكهة الأناناس الطبيعية مع نكهة المانجو الغنية لتمنحك تجربة استوائية مليئة بالانتعاش. كل قطعة مشبعة بالنكهة لتقدم مذاقًا فاكهيًا مميزًا يجعلها خيارًا مثاليًا للاستمتاع به في أي وقت من اليوم.
+          يحتوي الأناناس بشكل طبيعي على إنزيم البروميلين وفيتامين C، مما يجعله فاكهة مميزة ضمن نظام غذائي متوازن. كما يتميز بمذاقه المنعش وقوامه العصيري، ليقدم تجربة استوائية ممتعة في كل قطعة.
         </p>
       </div>
 
       <div class="englishSection">
-        <h2 class="descriptionTitle">Tropical Mango</h2>
 
         <p class="descriptionText">
           Enjoy pineapple pieces infused with rich Tropical Mango flavor, combining the natural taste of pineapple with a delicious tropical twist. Every piece is infused with flavor, delivering a refreshing fruity experience that's perfect anytime you want a vibrant tropical snack.
         </p>
+
+        <div class="sectionBlock">
+          <h2 class="sectionTitle">Nutrition Facts</h2>
+
+          <table class="factsTable">
+            <tr>
+              <th>Serving Size</th>
+              <td>350 ml</td>
+            </tr>
+            <tr>
+              <th>Calories</th>
+              <td>214</td>
+            </tr>
+            <tr>
+              <th>Sugars</th>
+              <td>19 g</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="sectionBlock">
+          <h2 class="sectionTitle">PINA Experience</h2>
+
+          <div class="experienceList">
+            <div class="experienceItem">
+              <span class="experienceLabel">Happiness</span>
+              <span class="experienceValue">1000%</span>
+            </div>
+
+            <div class="experienceItem">
+              <span class="experienceLabel">Good Vibes</span>
+              <span class="experienceValue">1000%</span>
+            </div>
+
+            <div class="experienceItem">
+              <span class="experienceLabel">Glowing Skin</span>
+              <span class="experienceValue">1000%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sectionBlock">
+          <h2 class="sectionTitle">Why Pineapple?</h2>
+
+          <p class="descriptionText">
+            Pineapple naturally contains bromelain and Vitamin C, making it a unique fruit that can be enjoyed as part of a balanced diet. Its juicy texture and refreshing taste create a delicious tropical experience in every bite.
+          </p>
+        </div>
+
       </div>
 
     </section>
