@@ -139,6 +139,10 @@
       white-space: nowrap;
     }
 
+    .optionalRow {
+      display: none;
+    }
+
     .experienceList {
       display: grid;
       gap: 10px;
@@ -237,13 +241,25 @@
             <th>حجم الحصة</th>
             <td id="servingAr"></td>
           </tr>
+
           <tr>
             <th>السعرات الحرارية</th>
             <td id="caloriesAr"></td>
           </tr>
+
           <tr>
             <th>السكريات</th>
             <td id="sugarsAr"></td>
+          </tr>
+
+          <tr id="proteinRowAr" class="optionalRow">
+            <th>البروتين</th>
+            <td id="proteinAr"></td>
+          </tr>
+
+          <tr id="caffeineRowAr" class="optionalRow">
+            <th>الكافيين</th>
+            <td id="caffeineAr"></td>
           </tr>
         </table>
       </div>
@@ -289,13 +305,25 @@
               <th>Serving Size</th>
               <td id="servingEn"></td>
             </tr>
+
             <tr>
               <th>Calories</th>
               <td id="caloriesEn"></td>
             </tr>
+
             <tr>
               <th>Sugars</th>
               <td id="sugarsEn"></td>
+            </tr>
+
+            <tr id="proteinRowEn" class="optionalRow">
+              <th>Protein</th>
+              <td id="proteinEn"></td>
+            </tr>
+
+            <tr id="caffeineRowEn" class="optionalRow">
+              <th>Caffeine</th>
+              <td id="caffeineEn"></td>
             </tr>
           </table>
         </div>
@@ -335,69 +363,9 @@
 
   </main>
 
+  <script src="products.js"></script>
+
   <script>
-    const products = {
-      "tropical-mango": {
-        title: "Tropical Mango | Pina Cool",
-        image: "Mangoes.PNG",
-        nameEn: "Tropical Mango",
-        nameAr: "مانجو استوائي",
-        descriptionAr: "استمتع بقطع الأناناس المنكهة بنكهة المانجو الاستوائية، حيث تمتزج نكهة الأناناس الطبيعية مع نكهة المانجو الغنية لتمنحك تجربة استوائية مليئة بالانتعاش. كل قطعة مشبعة بالنكهة لتقدم مذاقًا فاكهيًا مميزًا يجعلها خيارًا مثاليًا للاستمتاع به في أي وقت من اليوم.",
-        descriptionEn: "Enjoy pineapple pieces infused with rich Tropical Mango flavor, combining the natural taste of pineapple with a delicious tropical twist. Every piece is infused with flavor, delivering a refreshing fruity experience that's perfect anytime you want a vibrant tropical snack.",
-        servingAr: "350 مل",
-        caloriesAr: "214 سعرة",
-        sugarsAr: "19 جم",
-        servingEn: "350 ml",
-        caloriesEn: "214 kcal",
-        sugarsEn: "19 g"
-      },
-
-      "hibiscus-berries": {
-        title: "Hibiscus & Berries | Pina Cool",
-        image: "Hibiscus and Berries.PNG",
-        nameEn: "Hibiscus & Berries",
-        nameAr: "كركديه مع التوت",
-        descriptionAr: "استمتع بقطع الأناناس المنكهة بمزيج الكركديه والتوت، حيث يجتمع الطابع الزهري المنعش للكركديه مع النكهات الغنية للتوت ليمنحك تجربة فاكهية متوازنة ومليئة بالحيوية. كل قطعة مشبعة بالنكهة لتقدم مذاقًا منعشًا يجمع بين الحلاوة والانتعاش في كل قضمة.",
-        descriptionEn: "Enjoy pineapple pieces infused with a refreshing blend of Hibiscus & Berries flavor. The floral notes of hibiscus combine with the rich sweetness of berries to create a vibrant tropical taste. Every piece is infused with flavor, delivering a refreshing and satisfying fruity experience.",
-        servingAr: "350 مل",
-        caloriesAr: "100 سعرة",
-        sugarsAr: "19 جم",
-        servingEn: "350 ml",
-        caloriesEn: "100 kcal",
-        sugarsEn: "19 g"
-      },
-
-      "pink-lemonade": {
-        title: "Pink Lemonade | Pina Cool",
-        image: "Pink Lemonade.PNG",
-        nameEn: "Pink Lemonade",
-        nameAr: "ليمونادة وردية",
-        descriptionAr: "استمتع بقطع الأناناس المنكهة بنكهة الليمونادة الوردية، حيث تمتزج نكهة الأناناس الطبيعية مع لمسات الليمون المنعشة ونكهة الكرز الحلوة لتمنحك توازنًا رائعًا بين الحلاوة والانتعاش. كل قطعة مشبعة بالنكهة لتقدم تجربة فاكهية منعشة تجعلها خيارًا مثاليًا للاستمتاع بها في أي وقت من اليوم.",
-        descriptionEn: "Enjoy pineapple pieces infused with refreshing Pink Lemonade flavor, blending the natural taste of pineapple with bright lemon notes and a touch of sweet cherry. Every piece is infused with flavor, delivering a perfectly balanced fruity experience that's refreshing, vibrant, and enjoyable anytime.",
-        servingAr: "350 مل",
-        caloriesAr: "41 سعرة",
-        sugarsAr: "11 جم",
-        servingEn: "350 ml",
-        caloriesEn: "41 kcal",
-        sugarsEn: "11 g"
-      },
-
-      "blueberry-lemon": {
-        title: "Blueberry & Lemon | Pina Cool",
-        image: "Blueberry and Lemon.PNG",
-        nameEn: "Blueberry & Lemon",
-        nameAr: "توت أزرق مع الليمون",
-        descriptionAr: "استمتع بقطع الأناناس المنكهة بمزيج التوت الأزرق والليمون، حيث تمتزج حلاوة الأناناس الطبيعية مع نكهة التوت الغنية ولمسة الليمون الحمضية المنعشة لتمنحك مذاقًا فاكهيًا متوازنًا ومليئًا بالحيوية. كل قطعة مشبعة بالنكهة لتقدم تجربة منعشة تجمع بين الحلاوة والانتعاش في كل قضمة.",
-        descriptionEn: "Enjoy pineapple pieces infused with a refreshing blend of Blueberry & Lemon flavor. The natural sweetness of pineapple combines with rich blueberry notes and a bright citrus twist to create a vibrant and balanced fruity taste. Every piece is infused with flavor, delivering a refreshing experience in every bite.",
-        servingAr: "350 مل",
-        caloriesAr: "154 سعرة",
-        sugarsAr: "52 جم",
-        servingEn: "350 ml",
-        caloriesEn: "154 kcal",
-        sugarsEn: "52 g"
-      }
-    };
-
     const params = new URLSearchParams(window.location.search);
     const productKey = params.get("product") || "tropical-mango";
     const product = products[productKey] || products["tropical-mango"];
@@ -419,6 +387,20 @@
     document.getElementById("servingEn").textContent = product.servingEn;
     document.getElementById("caloriesEn").textContent = product.caloriesEn;
     document.getElementById("sugarsEn").textContent = product.sugarsEn;
+
+    if (product.proteinAr && product.proteinEn) {
+      document.getElementById("proteinAr").textContent = product.proteinAr;
+      document.getElementById("proteinEn").textContent = product.proteinEn;
+      document.getElementById("proteinRowAr").style.display = "table-row";
+      document.getElementById("proteinRowEn").style.display = "table-row";
+    }
+
+    if (product.caffeineAr && product.caffeineEn) {
+      document.getElementById("caffeineAr").textContent = product.caffeineAr;
+      document.getElementById("caffeineEn").textContent = product.caffeineEn;
+      document.getElementById("caffeineRowAr").style.display = "table-row";
+      document.getElementById("caffeineRowEn").style.display = "table-row";
+    }
   </script>
 
 </body>
