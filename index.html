@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Pina Cool</title>
-
   <meta name="description" content="الموقع الرسمي لمنتجات Pina Cool">
-
   <link rel="icon" type="image/jpeg" href="Pina-logo.jpg">
   <link rel="apple-touch-icon" href="Pina-logo.jpg">
-
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       min-height: 100%;
       scroll-behavior: smooth;
@@ -29,7 +24,6 @@
         #FDB414 100%
       );
     }
-
     body {
       min-height: 100vh;
       background: linear-gradient(
@@ -44,7 +38,6 @@
       overflow-x: hidden;
       position: relative;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -58,7 +51,6 @@
           transparent 35%
         );
     }
-
     #intro {
       position: fixed;
       inset: 0;
@@ -73,13 +65,11 @@
         opacity 0.6s ease,
         visibility 0.6s ease;
     }
-
     #intro.hide {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
-
     #intro img {
       width: 190px;
       max-width: 65vw;
@@ -90,38 +80,31 @@
         logoEnter 0.9s ease forwards,
         logoPulse 1.2s ease-in-out 0.9s;
     }
-
     @keyframes logoEnter {
       0% {
         opacity: 0;
         transform: scale(0.8);
       }
-
       65% {
         opacity: 1;
         transform: scale(1.05);
       }
-
       100% {
         opacity: 1;
         transform: scale(1);
       }
     }
-
     @keyframes logoPulse {
       0% {
         transform: scale(1);
       }
-
       50% {
         transform: scale(1.03);
       }
-
       100% {
         transform: scale(1);
       }
     }
-
     #mainContent {
       position: relative;
       z-index: 1;
@@ -134,39 +117,33 @@
         opacity 0.8s ease,
         transform 0.8s ease;
     }
-
     #mainContent.show {
       opacity: 1;
       transform: translateY(0);
     }
-
     .productsSection {
       width: 100%;
       max-width: 900px;
       margin: 0 auto;
       padding: 28px 16px 40px;
     }
-
     .sectionTitle {
       margin-bottom: 22px;
       text-align: center;
       font-size: 28px;
       color: #ffffff;
     }
-
     .productsGrid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
-
     .productCard {
       overflow: hidden;
       background: #ffffff;
       border-radius: 18px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
     }
-
     .productCard img {
       display: block;
       width: 100%;
@@ -174,90 +151,69 @@
       aspect-ratio: 1 / 1;
       object-fit: cover;
     }
-
     @media (min-width: 768px) {
       .productsSection {
         padding: 40px 24px 60px;
       }
-
       .productsGrid {
         gap: 20px;
       }
-
       .productCard {
         border-radius: 22px;
       }
     }
   </style>
 </head>
-
 <body>
-
   <div id="intro">
     <img src="Pina-logo.jpg" alt="Pina Cool Logo">
   </div>
-
   <main id="mainContent">
     <section class="productsSection">
       <h1 class="sectionTitle">نكهاتنا</h1>
-
       <div class="productsGrid">
-
         <article class="productCard">
-          <img src="Hibiscus and Berries.PNG" alt="Hibiscus and Berries">
+          <img src="Hibiscus and Berries.JPG" alt="Hibiscus and Berries">
         </article>
-
         <article class="productCard">
-          <img src="Mangoes.PNG" alt="Mangoes">
+          <img src="Mangoes.JPG" alt="Mangoes">
         </article>
-
         <article class="productCard">
-          <img src="Blueberry and Lemon.PNG" alt="Blueberry and Lemon">
+          <img src="Blueberry and Lemon.JPG" alt="Blueberry and Lemon">
         </article>
-
         <article class="productCard">
           <img src="Pink Lemonade.PNG" alt="Pink Lemonade">
         </article>
-
         <article class="productCard">
-          <img src="RedBull.PNG" alt="RedBull">
+          <img src="RedBull.JPG" alt="RedBull">
         </article>
-
         <article class="productCard">
-          <img src="Gummy Candy.PNG" alt="Gummy Candy">
+          <img src="Gummy Candy.JPG" alt="Gummy Candy">
         </article>
-
         <article class="productCard">
-          <img src="Pineapple Protein.PNG" alt="Pineapple Protein">
+          <img src="Pineapple Protein.JPG" alt="Pineapple Protein">
         </article>
-
         <article class="productCard">
-          <img src="Mango Protein.PNG" alt="Mango Protein">
+          <img src="Mango Protein.JPG" alt="Mango Protein">
         </article>
-
         <article class="productCard">
-          <img src="Pre-Work Fruit Punch.PNG" alt="Pre-Work Fruit Punch">
+          <img src="Pre-Work Fruit Punch.JPG" alt="Pre-Work Fruit Punch">
         </article>
-
         <article class="productCard">
-          <img src="Pre-Work Grapes.PNG" alt="Pre-Work Grapes">
+          <img src="Pre-Work Grapes.JPG" alt="Pre-Work Grapes">
         </article>
-
       </div>
     </section>
   </main>
-
   <script>
     window.addEventListener("load", () => {
       const intro = document.getElementById("intro");
       const mainContent = document.getElementById("mainContent");
-
       setTimeout(() => {
         intro.classList.add("hide");
         mainContent.classList.add("show");
       }, 1800);
     });
   </script>
-
 </body>
 </html>
