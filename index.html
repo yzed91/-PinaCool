@@ -46,6 +46,68 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
 .productInfo{padding:14px 10px 16px;text-align:center;}
 .productName{font-size:15px;font-weight:700;color:#333;line-height:1.4;direction:ltr;}
 .productNameAr{margin-top:4px;font-size:14px;font-weight:500;color:#666;line-height:1.5;direction:rtl;}
+
+.siteFooter{
+width:100%;
+max-width:900px;
+margin:42px auto 0;
+padding:0 16px 35px;
+text-align:center;
+}
+.footerDivider{
+width:100%;
+height:1px;
+margin-bottom:26px;
+background:rgba(255,255,255,.55);
+}
+.whatsappOrder{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+width:100%;
+max-width:500px;
+margin:0 auto 22px;
+padding:14px 20px;
+background:#25D366;
+color:#fff;
+border-radius:18px;
+text-decoration:none;
+box-shadow:0 8px 22px rgba(0,0,0,.18);
+transition:transform .2s ease,box-shadow .2s ease;
+}
+.whatsappOrder:active{
+transform:scale(.98);
+box-shadow:0 4px 12px rgba(0,0,0,.16);
+}
+.whatsappOrder svg{
+width:29px;
+height:29px;
+flex-shrink:0;
+fill:currentColor;
+}
+.whatsappText{display:grid;gap:2px;text-align:center;}
+.whatsappTextAr{font-size:18px;font-weight:800;line-height:1.3;}
+.whatsappTextEn{font-size:14px;font-weight:600;line-height:1.3;direction:ltr;}
+.socialLinks{display:flex;align-items:center;justify-content:center;gap:18px;}
+.socialLink{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:52px;
+height:52px;
+color:#222;
+background:#fff;
+border-radius:50%;
+box-shadow:0 6px 18px rgba(0,0,0,.16);
+text-decoration:none;
+transition:transform .2s ease,box-shadow .2s ease;
+}
+.socialLink:active{
+transform:scale(.94);
+box-shadow:0 3px 10px rgba(0,0,0,.14);
+}
+.socialLink svg{width:25px;height:25px;fill:currentColor;}
 </style>
 </head>
 <body class="lockScroll">
@@ -84,7 +146,10 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
   </div>
 </section>
 
-<main id="mainContent"><section class="productsSection"><h1 class="sectionTitle">نكهاتنا</h1><div class="productsGrid">
+<main id="mainContent">
+<section class="productsSection">
+<h1 class="sectionTitle">نكهاتنا</h1>
+<div class="productsGrid">
 
 <a href="product.html?product=hibiscus-berries" class="productLink">
   <article class="productCard">
@@ -186,7 +251,58 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
   </article>
 </a>
 
-</div></section></main>
+</div>
+</section>
+
+<footer class="siteFooter">
+  <div class="footerDivider"></div>
+
+  <a
+    class="whatsappOrder"
+    href="https://wa.me/966570030309"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Order through WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.04 2a9.84 9.84 0 0 0-8.43 14.91L2 22l5.24-1.56A9.96 9.96 0 1 0 12.04 2Zm4.29 11.93c-.23-.12-1.39-.69-1.61-.77-.21-.08-.37-.12-.53.12-.15.23-.61.77-.75.92-.14.16-.27.18-.5.06-.24-.12-.99-.36-1.88-1.16-.69-.61-1.16-1.38-1.3-1.61-.13-.23-.01-.36.1-.47.11-.1.24-.27.35-.4.12-.14.16-.24.24-.4.08-.15.04-.29-.02-.4-.06-.12-.53-1.28-.72-1.75-.19-.46-.38-.39-.53-.4h-.45c-.16 0-.41.06-.63.29-.21.23-.82.8-.82 1.96s.84 2.28.96 2.44c.12.15 1.65 2.52 4 3.53.56.24 1 .39 1.34.5.56.18 1.07.15 1.48.09.45-.07 1.39-.57 1.58-1.12.2-.55.2-1.02.14-1.12-.06-.1-.21-.16-.45-.27Z"/>
+    </svg>
+
+    <span class="whatsappText">
+      <span class="whatsappTextAr">اطلب الآن</span>
+      <span class="whatsappTextEn">Order Now</span>
+    </span>
+  </a>
+
+  <div class="socialLinks">
+
+    <a
+      class="socialLink"
+      href="https://www.instagram.com/pina.cool.sa?igsh=MWIzZnp0bTA4YjMxNw=="
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+      </svg>
+    </a>
+
+    <a
+      class="socialLink"
+      href="https://www.tiktok.com/@pina.cool.sa?_r=1&_t=ZS-98bURoOkuhx"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15.5 3c.3 1.9 1.4 3.3 3.5 3.8v3a8.2 8.2 0 0 1-3.5-1.1v6.1a6 6 0 1 1-5.2-5.9v3.1a3 3 0 1 0 2.2 2.8V3h3Z"/>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+</main>
 
 <script>
 window.addEventListener("load", () => {
