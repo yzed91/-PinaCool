@@ -38,7 +38,9 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
 #mainContent{position:relative;z-index:1;width:100%;min-height:100vh;background:transparent;opacity:0;transform:translateY(15px);transition:opacity .8s ease,transform .8s ease;}
 #mainContent.show{opacity:1;transform:translateY(0);}
 .productsSection{width:100%;max-width:900px;margin:0 auto;padding:28px 16px 40px;}
-.sectionTitle{margin-bottom:22px;text-align:center;font-size:28px;color:#fff;}
+.sectionTitle{margin-bottom:22px;text-align:center;color:#fff;}
+.sectionTitleAr{display:block;font-size:28px;font-weight:800;line-height:1.35;}
+.sectionTitleEn{display:block;margin-top:4px;font-size:17px;font-weight:600;line-height:1.35;direction:ltr;}
 .productsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
 .productLink{text-decoration:none;color:inherit;display:block;}
 .productCard{overflow:hidden;background:#fff;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,.14);}
@@ -156,7 +158,12 @@ box-shadow:0 3px 10px rgba(0,0,0,.14);
 
 <main id="mainContent">
 <section class="productsSection">
-<h1 class="sectionTitle">نكهاتنا</h1>
+
+<h1 class="sectionTitle">
+  <span class="sectionTitleAr">اكتشف نكهات PINA</span>
+  <span class="sectionTitleEn">Discover PINA Flavors</span>
+</h1>
+
 <div class="productsGrid">
 
 <a href="product.html?product=hibiscus-berries" class="productLink">
