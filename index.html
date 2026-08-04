@@ -22,6 +22,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
 .productsSection{width:100%;max-width:900px;margin:0 auto;padding:28px 16px 40px;}
 .sectionTitle{margin-bottom:22px;text-align:center;font-size:28px;color:#fff;}
 .productsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.productLink{text-decoration:none;color:inherit;display:block;}
 .productCard{overflow:hidden;background:#fff;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,.14);}
 .productCard img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;}
 .productInfo{padding:14px 10px 16px;text-align:center;}
@@ -34,7 +35,17 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;bac
 <main id="mainContent"><section class="productsSection"><h1 class="sectionTitle">نكهاتنا</h1><div class="productsGrid">
 
 <article class="productCard"><img src="Hibiscus and Berries.PNG"><div class="productInfo"><div class="productName">Hibiscus &amp; Berries</div><div class="productNameAr">كركديه مع التوت</div></div></article>
-<article class="productCard"><img src="Mangoes.PNG"><div class="productInfo"><div class="productName">Tropical Mango</div><div class="productNameAr">مانجو استوائي</div></div></article>
+
+<a href="product.html?product=tropical-mango" class="productLink">
+  <article class="productCard">
+    <img src="Mangoes.PNG" alt="Tropical Mango">
+    <div class="productInfo">
+      <div class="productName">Tropical Mango</div>
+      <div class="productNameAr">مانجو استوائي</div>
+    </div>
+  </article>
+</a>
+
 <article class="productCard"><img src="Blueberry and Lemon.PNG"><div class="productInfo"><div class="productName">Blueberry &amp; Lemon</div><div class="productNameAr">توت أزرق مع الليمون</div></div></article>
 <article class="productCard"><img src="Pink Lemonade.PNG"><div class="productInfo"><div class="productName">Pink Lemonade</div><div class="productNameAr">ليمونادة وردية</div></div></article>
 <article class="productCard"><img src="RedBull.PNG"><div class="productInfo"><div class="productName">Red Bull</div><div class="productNameAr">ريد بول</div></div></article>
