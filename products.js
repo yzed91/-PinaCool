@@ -1,4 +1,24 @@
 const products = {
+  "slp-chill": {
+    title: "SLP & Chill | PINA",
+    image: "SLP & Chill.PNG",
+    nameEn: "SLP & Chill",
+    nameAr: "راحة واسترخاء",
+    descriptionAr: "",
+    descriptionEn: "",
+    hideNutrition: true
+  },
+
+  "lavender-bliss": {
+    title: "Lavender Bliss | PINA",
+    image: "Lavender Bliss.PNG",
+    nameEn: "Lavender Bliss",
+    nameAr: "نعيم اللافندر",
+    descriptionAr: "",
+    descriptionEn: "",
+    hideNutrition: true
+  },
+
   "tropical-mango": {
     title: "Tropical Mango | Pina Cool",
     image: "Mangoes.PNG",
@@ -159,4 +179,3 @@ const products = {
     caffeineEn: "200 mg"
   }
 };
-
